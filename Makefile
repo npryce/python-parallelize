@@ -69,6 +69,8 @@ clean:
 .PHONY: again
 again: clean all
 
+published:
+	$(PYTHON_ENV)/bin/python setup.py sdist upload
 
 
 SCANNED_FILES=$(shell find $(SRCDIR) -type d) $(shell find test/ -type d) Makefile setup.py
